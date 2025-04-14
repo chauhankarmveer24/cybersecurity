@@ -1,0 +1,13 @@
+#from vs code to githup repo:
+> git init : sets up local repo in ur folder
+ 
+>git add . : adds all the files 
+
+>git commit -m "initial commit" : gives a message of "initial commit"
+
+>git remote add origin https://github.com/<your-username>/<repo-name>.git : HTTPS link of your repo
+ git branch -M main  : rename master to main (optional but standard)
+ git push -u origin main : push all the files in the repo
+
+#from git hub to vs code:
+>git clone #HTTPSrepo-link

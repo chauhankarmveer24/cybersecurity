@@ -1,0 +1,120 @@
+NETWORK TROUBLESHOOTING GUIDE
+============================
+
+1. BASIC NETWORK INFORMATION
+---------------------------
+ipconfig                    # Basic IP configuration
+ipconfig /all              # Detailed IP configuration
+ipconfig /release          # Release current IP
+ipconfig /renew            # Request new IP
+
+2. CONNECTIVITY TESTING
+----------------------
+ping 127.0.0.1             # Test localhost
+ping [IP address]          # Test specific IP
+ping [hostname]            # Test hostname resolution
+ping -t [IP]               # Continuous ping
+
+3. DNS AND NAME RESOLUTION
+-------------------------
+nslookup [domain]          # DNS lookup
+nslookup -type=MX [domain] # Check mail servers
+nslookup -type=NS [domain] # Check name servers
+
+4. NETWORK PATH ANALYSIS
+-----------------------
+tracert [hostname]         # Trace route to host
+pathping [hostname]        # More detailed path analysis
+
+5. NETWORK STATISTICS
+--------------------
+netstat -an                # Show all connections
+netstat -b                 # Show programs using connections
+netstat -r                 # Show routing table
+
+6. ARP (ADDRESS RESOLUTION PROTOCOL)
+----------------------------------
+arp -a                     # Show ARP table
+arp -d [IP]                # Delete ARP entry
+
+7. NETWORK RESET COMMANDS
+------------------------
+ipconfig /flushdns         # Clear DNS cache
+ipconfig /registerdns      # Register DNS
+netsh winsock reset        # Reset Winsock catalog
+
+8. FIREWALL AND PORT TESTING
+---------------------------
+telnet [host] [port]       # Test specific port
+netstat -an | findstr LISTENING  # Show listening ports
+
+TROUBLESHOOTING STEPS
+====================
+
+1. Start with Basic Configuration
+   - Run 'ipconfig' to check your current network settings
+   - Verify IP address, subnet mask, and default gateway
+   - Ensure you have a valid IP address (not 169.254.x.x)
+
+2. Test Local Connectivity
+   - Ping localhost (127.0.0.1) to verify network stack
+   - Ping your default gateway to check local network
+   - Ping other devices on your network
+
+3. Check DNS Resolution
+   - Use nslookup to verify DNS is working
+   - Try pinging a domain name (e.g., google.com)
+   - Check if DNS servers are properly configured
+
+4. Test Internet Connectivity
+   - Ping a public IP (e.g., 8.8.8.8)
+   - Use tracert to see where connection might fail
+   - Check if you can access websites
+
+5. Check Network Services
+   - Use netstat to check active connections
+   - Verify no firewall is blocking required ports
+   - Check if required services are running
+
+COMMON ISSUES AND SOLUTIONS
+==========================
+
+1. No Internet Access
+   - Check if you have a valid IP address
+   - Verify default gateway is correct
+   - Try releasing and renewing IP
+   - Check DNS settings
+
+2. Slow Network
+   - Use tracert to identify slow hops
+   - Check for network congestion
+   - Verify no background programs using bandwidth
+   - Check for malware or viruses
+
+3. DNS Issues
+   - Flush DNS cache
+   - Try different DNS servers
+   - Check DNS server configuration
+   - Verify network connectivity
+
+4. Connection Drops
+   - Check physical connections
+   - Verify network adapter settings
+   - Check for IP conflicts
+   - Monitor network stability
+
+5. Firewall Issues
+   - Check Windows Firewall settings
+   - Verify antivirus settings
+   - Check router firewall settings
+   - Test with firewall temporarily disabled
+
+SAFETY PRECAUTIONS
+=================
+- Always run commands in a safe environment
+- Be careful with network reset commands
+- Document changes before making them
+- Have a backup plan for network changes
+- Don't disable security features without proper consideration
+
+Remember: Always run these commands with appropriate permissions and be careful when modifying network settings. 

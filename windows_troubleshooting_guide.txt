@@ -1,0 +1,168 @@
+Windows Troubleshooting Guide
+============================
+
+1. Basic System Checks
+---------------------
+a) Check System Resources:
+   - Press Ctrl + Shift + Esc to open Task Manager
+   - Monitor:
+     * CPU usage
+     * Memory usage
+     * Disk activity
+     * Network activity
+
+b) Check Windows Services:
+   - Press Win + R, type "services.msc"
+   - Look for:
+     * Failed services
+     * Services not running
+     * Services with high resource usage
+
+c) Check Event Viewer:
+   - Press Win + R, type "eventvwr.msc"
+   - Review:
+     * System logs
+     * Application logs
+     * Security logs
+     * Critical errors
+
+2. Common Windows Issues and Solutions
+------------------------------------
+a) System Performance Issues:
+   - Run Disk Cleanup (cleanmgr)
+   - Check for malware
+   - Update Windows
+   - Check startup programs
+   - Run System File Checker (sfc /scannow)
+
+b) Network Issues:
+   - Check network adapter
+   - Run network troubleshooter
+   - Reset network stack:
+     * netsh winsock reset
+     * netsh int ip reset
+   - Check firewall settings
+   - Verify DNS settings
+
+c) Application Issues:
+   - Run as administrator
+   - Check compatibility settings
+   - Reinstall the application
+   - Update the application
+   - Check for Windows updates
+
+3. Advanced Troubleshooting Tools
+-------------------------------
+a) System File Checker:
+   - Open Command Prompt as administrator
+   - Run: sfc /scannow
+   - This checks and repairs system files
+
+b) DISM (Deployment Image Servicing and Management):
+   - Open Command Prompt as administrator
+   - Run: DISM /Online /Cleanup-Image /RestoreHealth
+   - This repairs Windows image
+
+c) Check Disk:
+   - Open Command Prompt as administrator
+   - Run: chkdsk C: /f /r
+   - This checks and repairs disk errors
+
+4. Windows Recovery Options
+-------------------------
+a) System Restore:
+   - Press Win + R, type "rstrui"
+   - Choose a restore point
+   - Follow the wizard
+
+b) Reset Windows:
+   - Settings > Update & Security > Recovery
+   - Choose "Reset this PC"
+   - Select keep or remove files
+
+c) Safe Mode:
+   - Restart PC while holding Shift
+   - Choose Troubleshoot > Advanced options
+   - Select Safe Mode
+
+5. Performance Optimization
+-------------------------
+a) Regular Maintenance:
+   - Run Disk Cleanup weekly
+   - Defragment hard drive monthly
+   - Update Windows regularly
+   - Scan for malware regularly
+
+b) Startup Optimization:
+   - Open Task Manager
+   - Go to Startup tab
+   - Disable unnecessary programs
+
+c) System Optimization:
+   - Adjust visual effects
+   - Optimize power settings
+   - Clean temporary files
+   - Manage disk space
+
+6. Network Troubleshooting
+-------------------------
+a) Basic Network Checks:
+   - Check physical connections
+   - Verify IP configuration
+   - Test internet connectivity
+   - Check DNS resolution
+
+b) Advanced Network Tools:
+   - ipconfig /all
+   - ping
+   - tracert
+   - nslookup
+   - netstat
+
+7. Security Troubleshooting
+--------------------------
+a) Check Windows Defender:
+   - Open Windows Security
+   - Run full scan
+   - Check for updates
+   - Review security settings
+
+b) Firewall Issues:
+   - Check firewall status
+   - Review firewall rules
+   - Test with firewall disabled
+   - Check application permissions
+
+8. Best Practices
+----------------
+- Keep Windows updated
+- Regular system maintenance
+- Backup important data
+- Use reliable antivirus
+- Monitor system resources
+- Document changes
+- Create restore points
+
+9. Common Commands
+-----------------
+- sfc /scannow (System File Checker)
+- DISM /Online /Cleanup-Image /RestoreHealth
+- chkdsk C: /f /r (Check Disk)
+- ipconfig /all (Network Configuration)
+- netstat -an (Network Connections)
+- tasklist (Running Processes)
+- systeminfo (System Information)
+
+10. When to Seek Professional Help
+--------------------------------
+- System won't boot
+- Blue screen errors
+- Data loss
+- Hardware failures
+- Complex network issues
+- Security breaches
+- Performance degradation
+
+Remember: Always backup important data before making system changes.
+Document any changes made during troubleshooting.
+Start with the simplest solutions before trying more complex ones. 
